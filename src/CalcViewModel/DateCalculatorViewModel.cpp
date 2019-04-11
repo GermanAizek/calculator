@@ -164,7 +164,7 @@ void DateCalculatorViewModel::UpdateDisplayResult()
         if (m_dateDiffResultInDays.day == 0)
         {
             IsDiffInDays = true;
-            StrDateDiffResultInDays = L"";
+            StrDateDiffResultInDays.clear();
             StrDateDiffResult = AppResourceProvider::GetInstance().GetResourceString(L"Date_SameDates");
         }
         else if ((m_dateDiffResult.year == 0) &&
@@ -172,7 +172,7 @@ void DateCalculatorViewModel::UpdateDisplayResult()
             (m_dateDiffResult.week == 0))
         {
             IsDiffInDays = true;
-            StrDateDiffResultInDays = L"";
+            StrDateDiffResultInDays.clear();
 
             // Display result in number of days
             StrDateDiffResult = GetDateDiffStringInDays();
