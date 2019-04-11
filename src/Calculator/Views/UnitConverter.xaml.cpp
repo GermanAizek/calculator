@@ -152,7 +152,7 @@ void UnitConverter::OnOfflineNetworkAccess()
 
 void UnitConverter::SetNormalCurrencyStatus()
 {
-    CurrencySecondaryStatus->Text = L"";
+    CurrencySecondaryStatus->Text.clear();
 }
 
 void UnitConverter::SetChargesMayApplyStatus()
