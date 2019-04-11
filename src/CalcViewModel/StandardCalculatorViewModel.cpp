@@ -511,7 +511,7 @@ void StandardCalculatorViewModel::HandleUpdatedOperandData(Command cmdenum)
     if (IsOperandTextCompletelySelected)
     {
         // Clear older text;
-        m_selectedExpressionLastData = L"";
+        m_selectedExpressionLastData.clear();
         if (ch == L'x')
         {
             temp[0] = L'\0';
